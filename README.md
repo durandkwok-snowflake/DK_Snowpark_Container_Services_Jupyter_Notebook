@@ -62,7 +62,7 @@ SHOW STAGES;
 ```
 ![image](https://github.com/durandkwok-snowflake/DK_Snowpark_Container_Services_Jupyter_Notebook/assets/109616231/16748175-2842-4c33-bef8-85917e760f7b)
 
-**###Create Folder For Jupyter Tutorial:**
+### Create Folder For Jupyter Tutorial:
 ```SQL
 (base) dkwok@D43HJ72NVN SnowparkContainerServices-Tutorials % ls
 Tutorial-1	Tutorial-2	Tutorial-3
@@ -70,26 +70,26 @@ Tutorial-1	Tutorial-2	Tutorial-3
 (base) dkwok@D43HJ72NVN SnowparkContainerServices-Tutorials % cd Tutorial-DK
 ```
 ![image](https://github.com/durandkwok-snowflake/DK_Snowpark_Container_Services_Jupyter_Notebook/assets/109616231/a6eedaee-ca3e-4bcd-86f2-609097236a00)
-**###Copy Docker and my_jupyter.yaml file to folder:**
+### Copy Docker and my_jupyter.yaml file to folder:
 Dockers Build the Image:
 ```SQL
 (base) dkwok@D43HJ72NVN Tutorial-Jupyter % docker build --rm --platform linux/amd64 -t sfsenorthamerica-dkdemo3.registry.snowflakecomputing.com/tutorial_db/data_schema/tutorial_repository/my_jupyter_image:latest .
 ```
 ![image](https://github.com/durandkwok-snowflake/DK_Snowpark_Container_Services_Jupyter_Notebook/assets/109616231/be3e34d2-bb52-4450-831d-fe4b9b6cc21c)
-**###Login to Dockers**
+### Login to Dockers
 ```SQL
 (base) dkwok@D43HJ72NVN Tutorial-Jupyter % docker login sfsenorthamerica-dkdemo3.registry.snowflakecomputing.com -u mike
 Password: 
 Login Succeeded
 ```
 ![image](https://github.com/durandkwok-snowflake/DK_Snowpark_Container_Services_Jupyter_Notebook/assets/109616231/e6fbc398-b6fa-4e7e-86d3-55daf7127f78)
-**###Dockers Push the Image**
+### Dockers Push the Image
 ```SQL
 (base) dkwok@D43HJ72NVN Tutorial-Jupyter % docker push sfsenorthamerica-dkdemo3.registry.snowflakecomputing.com/tutorial_db/data_schema/tutorial_repository/my_jupyter_image:latest
 ```
 ![image](https://github.com/durandkwok-snowflake/DK_Snowpark_Container_Services_Jupyter_Notebook/assets/109616231/eb5772ce-c7fe-4d54-8b87-08666e8ff38a)
-**###Dockers and My_jupyter.yaml:**
-**###Dockers**
+### Dockers and My_jupyter.yaml:
+### Dockers
 ```SQL
 (base) dkwok@D43HJ72NVN Tutorial-Jupyter % cat Dockerfile 
 FROM rapidsai/rapidsai:22.12-cuda11.5-base-ubuntu20.04-py3.8
@@ -105,7 +105,7 @@ EXPOSE 8888
 CMD ["/opt/conda/envs/rapids/bin/jupyter", "lab", "--ip=0.0.0.0", "--port=8888", "--no-browser", "--allow-root", "--NotebookApp.token=''", "--NotebookApp.password=''"]
 (base) dkwok@D43HJ72NVN Tutorial-Jupyter % 
 ```
-**###My_jupyter.yaml**
+### My_jupyter.yaml
 ```SQL
 (base) dkwok@D43HJ72NVN Tutorial-Jupyter % cat my_jupyter.yaml 
 spec:
@@ -125,17 +125,17 @@ spec:
     uid: 1000
     gid: 1000
 ```
-**###Upload my_jupyter.yaml to TUTORIAL_STAGE**
+### Upload my_jupyter.yaml to TUTORIAL_STAGE
 ![image](https://github.com/durandkwok-snowflake/DK_Snowpark_Container_Services_Jupyter_Notebook/assets/109616231/842cc6c3-9f45-40b1-bb5b-ed76314a4b40)
 
-**###Set Context, upload yaml file to stage and create service for jupyter**
+### Set Context, upload yaml file to stage and create service for jupyter
 ```SQL
 USE ROLE test_role;
 USE DATABASE tutorial_db;
 USE SCHEMA data_schema;
 USE WAREHOUSE tutorial_warehouse;
 ```
-**###Create jupyter_service pointing to image from my_jupyter.yaml**
+### Create jupyter_service pointing to image from my_jupyter.yaml
 ```SQL
 CREATE SERVICE jupyter_service
   IN COMPUTE POOL tutorial_compute_pool
@@ -176,7 +176,7 @@ SHOW ENDPOINTS IN SERVICE JUPYTER_SERVICE;
 SHOW COMPUTE POOLS;
 ```
 ![image](https://github.com/durandkwok-snowflake/DK_Snowpark_Container_Services_Jupyter_Notebook/assets/109616231/7bfba67c-4132-48db-8f41-9fabc39d1563)
-**###Test running Jupyter:**
+### Test running Jupyter:
 Run the following link on a browser tab
 https://kzhbyi-sfsenorthamerica-dkdemo3.snowflakecomputing.app/lab
 ![image](https://github.com/durandkwok-snowflake/DK_Snowpark_Container_Services_Jupyter_Notebook/assets/109616231/3e296857-9735-4b2b-acf0-f2eb6fb1496f)
