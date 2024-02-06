@@ -47,4 +47,4 @@ CREATE STAGE IF NOT EXISTS tutorial_stage
 
 -- Verify that you are ready to continue
 SHOW COMPUTE POOLS; 
-
+```
