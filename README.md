@@ -48,3 +48,4 @@ CREATE STAGE IF NOT EXISTS tutorial_stage
 -- Verify that you are ready to continue
 SHOW COMPUTE POOLS; 
 ```
+![image](https://github.com/durandkwok-snowflake/DK_Snowpark_Container_Services_Jupyter_Notebook/assets/109616231/ebb2c1f6-b5ef-47d6-beff-6a1647db5538)
