@@ -71,7 +71,7 @@ Tutorial-1	Tutorial-2	Tutorial-3
 ```
 ![image](https://github.com/durandkwok-snowflake/DK_Snowpark_Container_Services_Jupyter_Notebook/assets/109616231/a6eedaee-ca3e-4bcd-86f2-609097236a00)
 ### Copy Docker and my_jupyter.yaml file to folder:
-Dockers Build the Image:
+### Dockers Build the Image:
 ```SQL
 (base) dkwok@D43HJ72NVN Tutorial-Jupyter % docker build --rm --platform linux/amd64 -t sfsenorthamerica-dkdemo3.registry.snowflakecomputing.com/tutorial_db/data_schema/tutorial_repository/my_jupyter_image:latest .
 ```
