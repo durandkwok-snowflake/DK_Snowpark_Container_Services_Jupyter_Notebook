@@ -49,3 +49,16 @@ CREATE STAGE IF NOT EXISTS tutorial_stage
 SHOW COMPUTE POOLS; 
 ```
 ![image](https://github.com/durandkwok-snowflake/DK_Snowpark_Container_Services_Jupyter_Notebook/assets/109616231/ebb2c1f6-b5ef-47d6-beff-6a1647db5538)
+```SQL
+SHOW WAREHOUSES;
+```
+![image](https://github.com/durandkwok-snowflake/DK_Snowpark_Container_Services_Jupyter_Notebook/assets/109616231/7a37258e-874c-491c-9433-00ad9a9c3ac8)
+```SQL
+SHOW IMAGE REPOSITORIES;
+```
+![image](https://github.com/durandkwok-snowflake/DK_Snowpark_Container_Services_Jupyter_Notebook/assets/109616231/c92efe51-ef87-4e28-b3d0-126c0a72d558)
+```SQL
+SHOW STAGES;
+```
+![image](https://github.com/durandkwok-snowflake/DK_Snowpark_Container_Services_Jupyter_Notebook/assets/109616231/16748175-2842-4c33-bef8-85917e760f7b)
+
