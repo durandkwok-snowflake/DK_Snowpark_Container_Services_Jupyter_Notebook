@@ -178,5 +178,7 @@ SHOW COMPUTE POOLS;
 ![image](https://github.com/durandkwok-snowflake/DK_Snowpark_Container_Services_Jupyter_Notebook/assets/109616231/7bfba67c-4132-48db-8f41-9fabc39d1563)
 ### Test running Jupyter:
 Run the following link on a browser tab
+https://kzhbyi-sfsenorthamerica-dkdemo3.snowflakecomputing.app/lab/workspaces/auto-8
+
 https://kzhbyi-sfsenorthamerica-dkdemo3.snowflakecomputing.app/lab
 ![image](https://github.com/durandkwok-snowflake/DK_Snowpark_Container_Services_Jupyter_Notebook/assets/109616231/3e296857-9735-4b2b-acf0-f2eb6fb1496f)
