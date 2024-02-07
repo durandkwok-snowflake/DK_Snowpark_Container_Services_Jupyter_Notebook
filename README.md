@@ -68,8 +68,9 @@ SHOW STAGES;
 
 ### Create Folder For Jupyter Tutorial:
 ```SQL
+(base) dkwok@D43HJ72NVN % mkdir SnowparkContainerServices-Tutorials
+(base) dkwok@D43HJ72NVN % cd SnowparkContainerServices-Tutorials
 (base) dkwok@D43HJ72NVN SnowparkContainerServices-Tutorials % ls
-Tutorial-1	Tutorial-2	Tutorial-3
 (base) dkwok@D43HJ72NVN SnowparkContainerServices-Tutorials % mkdir Tutorial-DK
 (base) dkwok@D43HJ72NVN SnowparkContainerServices-Tutorials % cd Tutorial-DK
 ```
