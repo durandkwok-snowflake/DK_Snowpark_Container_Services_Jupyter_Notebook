@@ -228,3 +228,5 @@ plt.xlabel('City')
 plt.ylabel('Number of People')
 plt.show()
 ```
+<img width="1366" alt="image" src="https://github.com/durandkwok-snowflake/Snowpark_Container_Services_Jupyter_Notebook/assets/109616231/2a0d44f0-47e5-440f-b270-855cfb412610">
+
