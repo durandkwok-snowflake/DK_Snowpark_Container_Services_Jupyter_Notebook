@@ -182,3 +182,44 @@ https://kzhbyi-sfsenorthamerica-dkdemo3.snowflakecomputing.app/lab/workspaces/au
 
 https://kzhbyi-sfsenorthamerica-dkdemo3.snowflakecomputing.app/lab
 ![image](https://github.com/durandkwok-snowflake/DK_Snowpark_Container_Services_Jupyter_Notebook/assets/109616231/3e296857-9735-4b2b-acf0-f2eb6fb1496f)
+
+### Testing Jupyter with Sample Code:
+```SQL
+# Import necessary libraries
+import pandas as pd
+import matplotlib.pyplot as plt
+
+# Sample data: Creating a DataFrame
+data = {
+    'Name': ['John', 'Jane', 'Bob', 'Alice', 'Charlie'],
+    'Age': [28, 22, 35, 30, 40],
+    'City': ['New York', 'San Francisco', 'Los Angeles', 'Chicago', 'Seattle'],
+    'Salary': [80000, 90000, 120000, 100000, 110000],
+}
+
+df = pd.DataFrame(data)
+
+# Display the first few rows of the dataframe
+print("First few rows of the dataframe:")
+print(df.head())
+
+# Basic statistics of numerical columns
+print("\nBasic statistics of numerical columns:")
+print(df.describe())
+
+# Filter data: Selecting individuals above the age of 30
+above_30 = df[df['Age'] > 30]
+
+# Grouping data: Count the number of people in each city
+people_by_city = df.groupby('City').size().reset_index(name='Number of People')
+
+# Display the grouped data
+print("\nNumber of people in each city:")
+print(people_by_city)
+
+# Plotting the data
+people_by_city.plot(x='City', y='Number of People', kind='bar', title='Number of People in Each City')
+plt.xlabel('City')
+plt.ylabel('Number of People')
+plt.show()
+```
